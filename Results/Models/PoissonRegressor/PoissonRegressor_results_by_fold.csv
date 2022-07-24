@@ -1,0 +1,16 @@
+Fold,type,rmse,r2
+1,training fold,0.29111,0.99875
+1,validation fold,226.88791,226.88791
+1,testing fold,20.78333,-2.82464
+2,training fold,0.22565,0.99925
+2,validation fold,150.21559,150.21559
+2,testing fold,28.81758,-6.35319
+3,training fold,0.21755,0.99926
+3,validation fold,345.36668,345.36668
+3,testing fold,25.71948,-4.85713
+4,training fold,0.29298,0.99871
+4,validation fold,540.87256,540.87256
+4,testing fold,25.95153,-4.9633
+5,training fold,0.27014,0.99892
+5,validation fold,259.7356,259.7356
+5,testing fold,38.61457,-12.20271
