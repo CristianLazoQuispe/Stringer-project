@@ -15,7 +15,14 @@ def get_dataset(PATH_DATA,FNMAME,FEATURES,TARGET):
     print(dat.keys())
 
     X = dat[FEATURES].T
-    y = dat[TARGET]
+    
+    if TARGET == "pupilCOM_x":
+        y = dat['pupilCOM'][:,0]
+    elif TARGET == "pupilCOM_y":
+        y = dat['pupilCOM'][:,1]
+    else:
+        y = dat[TARGET]    
+    
     print(" X size :",X.shape)
     print(" y size :",y.shape)
     return X,y

@@ -163,3 +163,16 @@ def create_folder(directory):
 
     if not os.path.exists(directory):
         os.makedirs(directory)
+        
+        
+        
+def training_model_cv(X_train,y_train,X_test,y_test,n_splits,total_models,path_model):
+    
+    for model_name in total_models.keys():
+        
+        model = total_models[model_name]
+        
+        y_test_pred_cv = cross_validate(X_train, y_train, X_test, y_test,
+                                                 n_splits=n_splits,
+                                                 model = model,model_name=model_name,
+                                                 path_model=path_model)
