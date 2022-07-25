@@ -1,0 +1,4 @@
+type,rmse,r2
+training mean cv,0.10233,0.99829
+validation mean cv,3.31478,-0.11465
+testing mean cv,3.30563,-0.92571
