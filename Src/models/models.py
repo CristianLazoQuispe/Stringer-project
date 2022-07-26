@@ -14,10 +14,13 @@ from lightgbm import LGBMRegressor
 total_models  = {
     
     "LinearRegression": LinearRegression(positive=False),
+    
     "ElasticNet"      : ElasticNet(alpha=0.1,l1_ratio=0.01,random_state=0),
     "BayesianRidge"   : BayesianRidge(),
     "Ridge"           : Ridge(alpha=0.001,solver='sag'),
     "Lasso"           : Lasso(alpha=0.001),
+    
+    
     "PoissonRegressor": PoissonRegressor(alpha=0.1),
     "DecisionTreeRegressor": DecisionTreeRegressor(random_state=0,max_depth=20),
     "XGBRegressor"    : xgb.XGBRegressor(objective ='reg:linear', colsample_bytree = 0.3, 
