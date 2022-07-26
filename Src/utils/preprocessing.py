@@ -138,23 +138,25 @@ def auto_PCA(X_train,X_test,max_variance_explanation=None,max_components=20):
     print("X_test size  :",X_test.shape)
     
     if max_variance_explanation == None:
-        pca = PCA(max_variance_explanation)
-        pca.fit(X_train)
-    else:
         pca = PCA()
         pca.fit(X_train)
+    
+    else:
+        pca = PCA(max_variance_explanation)
+        pca.fit(X_train)
+
         
     print("# principal components :",pca.n_components_)
     print("PCA completed!")
     print('max variance explained :',np.sum(pca.explained_variance_ratio_))
 
     if max_variance_explanation == None:
+        X_train_pca = pca.transform(X_train)[:,:max_components]
+        X_test_pca =  pca.transform(X_test)[:,:max_components]
+    else:
         X_train_pca = pca.transform(X_train)
         X_test_pca =  pca.transform(X_test)
    
-    else:
-        X_train_pca = pca.transform(X_train)[:,:max_components]
-        X_test_pca =  pca.transform(X_test)[:,:max_components]
 
     print("X_train_pca size :",X_train_pca.shape)
     print("X_test_pca size  :",X_test_pca.shape)
