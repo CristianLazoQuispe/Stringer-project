@@ -1,4 +1,4 @@
-# 🧠 Stringer-project
+# 🧠 Spontaneous Behavior \& Visual Cortex Dynamics
 
 Analysis of spontaneous behavior and visual cortex activity based on the Stringer et al. dataset.  
 Includes notebooks for preprocessing, feature extraction, modeling, and visualization.
